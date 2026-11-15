@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La Bella | Italian Restaurant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="header">
+
+    <div class="logo">
+        LA BELLA<span>.</span>
+    </div>
+
+    <nav class="navbar">
+
+        <a href="Home.html">Home</a>
+
+        <a href="Skill.html">Skills</a>
+
+        <a href="Problem-Solving%20Page.html">
+            Problem Solving
+        </a>
+
+        <a href="Business%20Showcase%20Page.html">
+            Business Showcase
+        </a>
+
+        <a href="Contact.html">Contact</a>
+
+    </nav>
+
+</header>
+<style>
+    /* NAVIGATION BAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    background-color: #171717;
+    padding: 22px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #d6ad60;
+}
+
+/* NAVIGATION LINKS */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #d6ad60;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+}
+</style>
+ <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="gold-text">
+                AUTHENTIC ITALIAN DINING
+            </p>
+
+            <h1>
+                A Taste Of Italy,<br>
+                A Touch Of <span>Elegance.</span>
+            </h1>
+
+            <p class="hero-description">
+                Welcome to La Bella. Experience delicious
+                Italian cuisine, fresh ingredients and
+                unforgettable moments.
+            </p>
+
+            <a href="#menu" class="gold-button">
+                DISCOVER OUR MENU
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="welcome">
+
+        <div class="welcome-image">
+            <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+            alt="Elegant restaurant interior">
+        </div>
+
+        <div class="welcome-text">
+
+            <p class="gold-text">BENVENUTI A LA BELLA</p>
+
+            <h2>Welcome To Our Table</h2>
+
+            <p>
+                At La Bella, we believe that food is more
+                than just a meal. It is an experience.
+
+                Inspired by Italian traditions, our
+                restaurant brings together beautiful
+                flavours, quality ingredients and a
+                welcoming atmosphere.
+
+                Every visit is an opportunity to enjoy
+                something special.
+            </p>
+
+            <a href="#menu" class="text-link">
+                EXPLORE OUR FOOD →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU PREVIEW -->
+
+    <section class="menu" id="menu">
+
+        <p class="gold-text">MADE WITH PASSION</p>
+
+        <h2>Our Signature Dishes</h2>
+
+        <p class="menu-intro">
+            A little taste of what La Bella has to offer.
+        </p>
+
+        <div class="menu-container">
+
+            <div class="menu-card">
+
+                <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=85"
+                alt="Fresh Italian pasta">
+
+                <div class="menu-info">
+
+                    <h3>Italian Pasta</h3>
+
+                    <p>
+                        Freshly prepared pasta with
+                        delicious homemade sauce.
+                    </p>
+
+                    <span>£14.95</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img
+                src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=85"
+                alt="Delicious steak">
+
+                <div class="menu-info">
+
+                    <h3>Signature Steak</h3>
+
+                    <p>
+                        Perfectly grilled steak with
+                        carefully selected sides.
+                    </p>
+
+                    <span>£24.95</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-card">
+
+                <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=85"
+                alt="Italian pizza">
+
+                <div class="menu-info">
+
+                    <h3>Classic Pizza</h3>
+
+                    <p>
+                        Traditional stone-baked pizza
+                        with fresh ingredients.
+                    </p>
+
+                    <span>£13.95</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE SECTION -->
+
+    <section class="experience">
+
+        <div class="experience-content">
+
+            <p class="gold-text">THE LA BELLA EXPERIENCE</p>
+
+            <h2>Good Food.<br>Beautiful Moments.</h2>
+
+            <p>
+                From the first bite to the last,
+                we want every moment at La Bella
+                to be special.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>LA BELLA<span>.</span></h2>
+
+        <p>Authentic Flavours. Unforgettable Moments.</p>
+
+        <div class="footer-links">
+
+            <a href="Home.html">Home</a>
+
+            <a href="Skills.html">Skills</a>
+
+            <a href="Problem-Solving%20Page.html">
+                Problem Solving
+            </a>
+
+            <a href="Business%20Showcase%20Page.html">
+                Business Showcase
+            </a>
+
+            <a href="Contact.html">Contact</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 La Bella. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
