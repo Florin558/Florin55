@@ -1,26 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- NAVIGATION BAR -->
+    <title>La Bella | Home</title>
 
-    <header>
-        <div class="logo">LA BELLA<span>.</span></div>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <nav id="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#problem-solving">Problem Solving</a>
-            <a href="#showcase">Business Showcase</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <button class="menu-toggle" onclick="toggleMenu()">
-            ☰
-        </button>
-    </header>
+<body>
     <style>
-        /* GENERAL SETTINGS */
-
-* {
+        * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -54,13 +46,13 @@ header {
 }
 
 .logo span,
-footer h2 span {
+footer span {
     color: #d6ad60;
 }
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 25px;
 }
 
 nav a {
@@ -77,8 +69,8 @@ nav a.active {
 
 .menu-toggle {
     display: none;
-    background: none;
     color: white;
+    background: none;
     border: none;
     font-size: 27px;
     cursor: pointer;
@@ -93,8 +85,7 @@ nav a.active {
     padding: 80px 10%;
 
     background:
-    linear-gradient(rgba(0,0,0,.65),
-    rgba(0,0,0,.65)),
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
     url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=85");
 
     background-position: center;
@@ -102,12 +93,12 @@ nav a.active {
 }
 
 .hero-content {
-    max-width: 700px;
     color: white;
+    max-width: 650px;
 }
 
 .subtitle {
-    color: #bd944c;
+    color: #c49a50;
     letter-spacing: 4px;
     font-size: 13px;
     font-weight: bold;
@@ -115,8 +106,8 @@ nav a.active {
 }
 
 .hero h1 {
-    font-size: 70px;
-    line-height: 1.1;
+    font-size: 68px;
+    line-height: 1.15;
     margin-bottom: 25px;
 }
 
@@ -124,158 +115,99 @@ nav a.active {
     color: #d6ad60;
 }
 
-.description {
+.hero-content > p:not(.subtitle) {
     font-size: 18px;
     line-height: 1.8;
-    margin-bottom: 35px;
-}
-
-.btn,
-.btn-outline {
-    display: inline-block;
-    padding: 15px 25px;
-    text-decoration: none;
-    margin: 5px;
-    transition: 0.3s;
+    margin-bottom: 30px;
 }
 
 .btn {
+    display: inline-block;
     background: #d6ad60;
     color: #151515;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
     background: white;
 }
 
-.btn-outline {
-    border: 1px solid #d6ad60;
-    color: white;
-}
-
-.btn-outline:hover {
-    background: #d6ad60;
-    color: #151515;
-}
-
 /* INTRODUCTION */
 
 .intro {
+    padding: 90px 15%;
     text-align: center;
-    padding: 100px 15%;
 }
 
 h2 {
     font-size: 38px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .intro p:last-child {
     color: #666;
-    line-height: 1.9;
     font-size: 17px;
+    line-height: 1.9;
 }
 
-/* SECTIONS */
+/* MENU */
 
-.sections,
-.problem,
-.showcase,
-.contact {
-    padding: 90px 9%;
+.menu {
+    background: #eee9df;
+    padding: 90px 8%;
     text-align: center;
 }
 
-.sections {
-    background: #eee9df;
+.menu-description {
+    color: #666;
+    margin-bottom: 35px;
 }
 
-.cards {
+.menu-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 45px;
+    gap: 30px;
+    margin-top: 35px;
 }
 
-.card {
+.menu-card {
     background: white;
-    padding: 35px 25px;
-    border-radius: 6px;
-    box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
     transition: .3s;
 }
 
-.card:hover {
+.menu-card:hover {
     transform: translateY(-8px);
 }
 
-.card h3 {
-    margin-bottom: 18px;
-    color: #a77b32;
+.menu-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
 }
 
-.card p {
+.menu-card h3 {
+    margin: 20px 0 12px;
+    font-size: 22px;
+}
+
+.menu-card p {
     color: #666;
-    line-height: 1.7;
+    padding: 0 15px;
+    line-height: 1.6;
 }
 
-/* PROBLEM SOLVING */
-
-.problem {
-    background: #171717;
-    color: white;
-}
-
-.problem > p:not(.subtitle) {
-    max-width: 700px;
-    margin: auto;
-    line-height: 1.8;
-    color: #ccc;
-}
-
-.problem .card {
-    color: #222;
-}
-
-/* BUSINESS SHOWCASE */
-
-.showcase-content {
-    display: flex;
-    align-items: center;
-    gap: 45px;
-    text-align: left;
-    margin-top: 40px;
-}
-
-.showcase-content img {
-    width: 50%;
-    border-radius: 8px;
-}
-
-.showcase-content div {
-    flex: 1;
-}
-
-.showcase-content h3 {
-    font-size: 27px;
-    margin-bottom: 20px;
-}
-
-.showcase-content p {
-    line-height: 1.8;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-/* CONTACT */
-
-.contact {
-    background: #eee9df;
-}
-
-.contact p:not(.subtitle) {
-    margin-bottom: 30px;
-    color: #555;
+.menu-card span {
+    display: block;
+    color: #b1843b;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 20px;
 }
 
 /* FOOTER */
@@ -284,36 +216,19 @@ footer {
     background: #151515;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 footer h2 {
-    color: white;
     letter-spacing: 4px;
 }
 
-.footer-links {
-    margin: 25px 0;
+footer p {
+    color: #aaa;
+    margin-top: 12px;
 }
 
-.footer-links a {
-    color: #ccc;
-    text-decoration: none;
-    margin: 10px;
-    font-size: 14px;
-}
-
-.footer-links a:hover {
-    color: #d6ad60;
-}
-
-.copyright {
-    color: #888;
-    font-size: 13px;
-    margin-top: 25px;
-}
-
-/* MOBILE DESIGN */
+/* MOBILE */
 
 @media (max-width: 900px) {
 
@@ -329,8 +244,7 @@ footer h2 {
         display: none;
         flex-direction: column;
         width: 100%;
-        gap: 20px;
-        padding: 20px 0;
+        padding-top: 20px;
     }
 
     nav.show {
@@ -341,73 +255,65 @@ footer h2 {
         font-size: 48px;
     }
 
-    .cards {
+    .menu-container {
         grid-template-columns: 1fr;
-    }
-
-    .showcase-content {
-        flex-direction: column;
-    }
-
-    .showcase-content img {
-        width: 100%;
     }
 
     .intro {
         padding: 70px 8%;
     }
 }
-
-@media (max-width: 500px) {
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
-
-    .hero {
-        min-height: 75vh;
-    }
-
-    .footer-links a {
-        display: inline-block;
-    }
-}
     </style>
 
+    <!-- NAVIGATION BAR -->
+
+    <header>
+
+        <div class="logo">LA BELLA<span>.</span></div>
+
+        <nav id="navbar">
+
+            <a href="index.html" class="active">Home</a>
+
+            <a href="skills.html">Skills</a>
+
+            <a href="problem-solving.html">Problem Solving</a>
+
+            <a href="showcase.html">Business Showcase</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </header>
 
 
-    <!-- HOME PAGE -->
+    <!-- HOMEPAGE HERO -->
 
-    <section class="hero" id="home">
-        
+    <section class="hero">
 
         <div class="hero-content">
 
             <p class="subtitle">WELCOME TO LA BELLA</p>
 
-            <h1>Where Passion<br>
-            Meets <span>Flavour.</span></h1>
+            <h1>
+                Experience The<br>
+                Taste Of <span>Italy.</span>
+            </h1>
 
-            <p class="description">
-                Discover exceptional food, beautiful experiences
-                and the passion behind our business.
+            <p>
+                Fresh ingredients, authentic flavours
+                and unforgettable dining experiences.
+                Discover the taste of La Bella.
             </p>
 
-            <div class="hero-buttons">
-
-                <a href="#showcase" class="btn">
-                    Explore Our Business
-                </a>
-
-                <a href="#contact" class="btn-outline">
-                    Contact Us
-                </a>
-
-            </div>
+            <a href="#menu" class="btn">
+                Explore Our Menu
+            </a>
 
         </div>
 
@@ -418,160 +324,92 @@ footer h2 {
 
     <section class="intro">
 
-        <p class="subtitle">THE LA BELLA EXPERIENCE</p>
+        <p class="subtitle">ABOUT LA BELLA</p>
 
-        <h2>More Than Just a Restaurant</h2>
+        <h2>A Taste Worth Remembering</h2>
 
         <p>
-            At La Bella, we believe that great food,
-            excellent service and a welcoming atmosphere
-            create unforgettable experiences.
+            Welcome to La Bella, where great food and
+            wonderful experiences come together.
 
-            Our business is built around quality,
-            creativity and bringing people together.
+            We are passionate about serving delicious
+            dishes, using quality ingredients and
+            creating a warm and welcoming atmosphere
+            for every customer.
         </p>
 
     </section>
 
 
-    <!-- SKILLS SECTION -->
+    <!-- MENU PREVIEW -->
 
-    <section class="sections" id="skills">
+    <section class="menu" id="menu">
 
-        <p class="subtitle">WHAT WE DO</p>
+        <p class="subtitle">OUR FAVOURITES</p>
 
-        <h2>Our Skills</h2>
+        <h2>Discover Our Menu</h2>
 
-        <div class="cards">
-
-            <div class="card">
-                <h3>🍽 Food Preparation</h3>
-                <p>
-                    Preparing delicious dishes using
-                    quality ingredients and creativity.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>🤝 Customer Service</h3>
-                <p>
-                    Providing friendly service and
-                    creating positive customer experiences.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>📊 Business Management</h3>
-                <p>
-                    Managing daily operations,
-                    organisation and business growth.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROBLEM SOLVING SECTION -->
-
-    <section class="problem" id="problem-solving">
-
-        <p class="subtitle">OUR APPROACH</p>
-
-        <h2>Problem Solving</h2>
-
-        <p>
-            Every successful business faces challenges.
-            At La Bella, we believe in identifying problems,
-            finding solutions and constantly improving.
+        <p class="menu-description">
+            Explore a selection of delicious dishes
+            prepared with passion and care.
         </p>
 
-        <div class="cards">
+        <div class="menu-container">
 
-            <div class="card">
-                <h3>01. Identify</h3>
+            <div class="menu-card">
+
+                <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80"
+                alt="Italian pasta">
+
+                <h3>Italian Pasta</h3>
+
                 <p>
-                    Understand challenges and listen
-                    carefully to customer feedback.
+                    Fresh pasta with a delicious
+                    homemade sauce.
                 </p>
+
+                <span>£14.95</span>
+
             </div>
 
-            <div class="card">
-                <h3>02. Plan</h3>
+
+            <div class="menu-card">
+
+                <img
+                src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
+                alt="Grilled steak">
+
+                <h3>Signature Steak</h3>
+
                 <p>
-                    Develop practical ideas and
-                    effective solutions.
+                    Beautifully grilled steak
+                    with fresh seasonal sides.
                 </p>
+
+                <span>£24.95</span>
+
             </div>
 
-            <div class="card">
-                <h3>03. Improve</h3>
-                <p>
-                    Put solutions into action and
-                    monitor the results.
-                </p>
-            </div>
 
-        </div>
+            <div class="menu-card">
 
-    </section>
+                <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                alt="Italian pizza">
 
-
-    <!-- BUSINESS SHOWCASE -->
-
-    <section class="showcase" id="showcase">
-
-        <p class="subtitle">DISCOVER OUR BUSINESS</p>
-
-        <h2>Business Showcase</h2>
-
-        <div class="showcase-content">
-
-            <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
-            alt="La Bella restaurant interior">
-
-            <div>
-                <h3>Welcome to La Bella</h3>
+                <h3>Classic Pizza</h3>
 
                 <p>
-                    La Bella is a restaurant business
-                    focused on quality food, customer
-                    satisfaction and a memorable dining
-                    experience.
-
-                    We aim to create a welcoming
-                    environment where customers can
-                    enjoy great food and great service.
+                    Stone-baked pizza with
+                    fresh Italian ingredients.
                 </p>
 
-                <a href="#contact" class="btn">
-                    Find Out More
-                </a>
+                <span>£13.95</span>
+
             </div>
 
         </div>
-
-    </section>
-
-
-    <!-- CONTACT SECTION -->
-
-    <section class="contact" id="contact">
-
-        <p class="subtitle">GET IN TOUCH</p>
-
-        <h2>Contact La Bella</h2>
-
-        <p>
-            Have a question or want to find out more
-            about our business? Get in touch.
-        </p>
-
-        <a href="mailto:hello@labella.com" class="btn">
-            Email Us
-        </a>
 
     </section>
 
@@ -582,23 +420,17 @@ footer h2 {
 
         <h2>LA BELLA<span>.</span></h2>
 
-        <p>Passion, Quality & Excellence.</p>
+        <p>Authentic Flavours. Unforgettable Moments.</p>
 
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#problem-solving">Problem Solving</a>
-            <a href="#showcase">Showcase</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-        <p class="copyright">
-            © 2026 La Bella. All Rights Reserved.
-        </p>
+        <p>© 2026 La Bella. All Rights Reserved.</p>
 
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
+
+    
