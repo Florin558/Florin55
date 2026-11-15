@@ -22,6 +22,257 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella - Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f8f5ef;
+            color: #222;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: #171717;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: #d6ad60;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d6ad60;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            height: 85vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.55),
+                rgba(0,0,0,0.55)),
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=85');
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d6ad60;
+            color: #171717;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* ABOUT SECTION */
+
+        .about {
+            padding: 90px 10%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 38px;
+            color: #a77b32;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* MENU SECTION */
+
+        .menu {
+            padding: 80px 8%;
+            background: #eee9df;
+            text-align: center;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .menu-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .menu-card h3 {
+            margin: 18px 0 10px;
+            font-size: 22px;
+        }
+
+        .menu-card p {
+            color: #666;
+            padding: 0 15px;
+            line-height: 1.5;
+        }
+
+        .price {
+            color: #b1843b;
+            font-size: 21px;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        /* RESERVATION SECTION */
+
+        .reservation {
+            padding: 90px 20px;
+            background: #171717;
+            text-align: center;
+            color: white;
+        }
+
+        .reservation h2 {
+            font-size: 38px;
+            color: #d6ad60;
+            margin-bottom: 20px;
+        }
+
+        .reservation p {
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        /* OPENING HOURS */
+
+        .hours {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hours p {
+            margin: 12px;
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            margin: 8px;
+            color: #bbb;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .menu-container {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
 
 
     <!-- HERO SECTION -->
