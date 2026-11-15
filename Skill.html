@@ -552,5 +552,60 @@ footer p {
 .copyright {
     font-size: 12px;
 }
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .welcome {
+        flex-direction: column;
+    }
+
+    .welcome-image {
+        width: 100%;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .welcome-text h2,
+    .menu h2 {
+        font-size: 32px;
+    }
+
+    .experience h2 {
+        font-size: 35px;
+    }
+}
 </style>
    
