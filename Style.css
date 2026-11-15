@@ -891,3 +891,244 @@ footer p {
         font-size: 35px;
     }
 }
+
+/* ============================= */
+/* BUSINESS SHOWCASE PAGE */
+/* ============================= */
+
+.showcase-hero {
+    min-height: 75vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+}
+
+.showcase-hero-content {
+    max-width: 700px;
+}
+
+.showcase-hero h1 {
+    color: #f5f0e6;
+    font-size: 58px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.showcase-hero h1 span {
+    color: #c9a45c;
+}
+
+.showcase-hero-content > p:not(.gold-text) {
+    color: #ddd5c7;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* About the Business */
+
+.business-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f5f0e6;
+    min-height: 550px;
+}
+
+.business-about-image {
+    background:
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85");
+    background-size: cover;
+    background-position: center;
+    min-height: 450px;
+}
+
+.business-about-content {
+    padding: 80px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.business-about-content h2 {
+    color: #171717;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.business-about-content p:not(.gold-text) {
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* What We Offer */
+
+.business-offers {
+    background: #111;
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.business-offers h2 {
+    color: #f5f0e6;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.offer-card {
+    background: #1c1c1c;
+    border: 1px solid #574526;
+    text-align: left;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.offer-card:hover {
+    transform: translateY(-7px);
+    border-color: #c9a45c;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.offer-content {
+    padding: 25px;
+}
+
+.offer-content h3 {
+    color: #c9a45c;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.offer-content p {
+    color: #c7c0b5;
+    line-height: 1.8;
+}
+
+/* Why Choose La Bella */
+
+.why-labella {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f5f0e6;
+}
+
+.why-content {
+    padding: 80px 10%;
+}
+
+.why-content h2 {
+    color: #171717;
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.why-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.why-item span {
+    color: #b18a43;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.why-item h3 {
+    color: #171717;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.why-item p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.why-image {
+    background:
+        url("https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=85");
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+}
+
+/* Brand Statement */
+
+.business-statement {
+    background: #1a1a1a;
+    text-align: center;
+    padding: 90px 12%;
+}
+
+.business-statement h2 {
+    color: #f5f0e6;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.business-statement > p:last-child {
+    color: #c7c0b5;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .showcase-hero {
+        padding: 70px 7%;
+    }
+
+    .showcase-hero h1 {
+        font-size: 38px;
+    }
+
+    .business-about,
+    .why-labella {
+        grid-template-columns: 1fr;
+    }
+
+    .business-about-image {
+        min-height: 300px;
+    }
+
+    .business-about-content,
+    .why-content {
+        padding: 55px 8%;
+    }
+
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-image {
+        min-height: 300px;
+    }
+
+    .business-offers h2,
+    .business-statement h2 {
+        font-size: 30px;
+    }
+}
