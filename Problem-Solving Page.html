@@ -1,165 +1,292 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="Style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La Bella | Home</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-<a href="Home.html">Home</a>
-<a href="Business Showcase Page.html">Business Showcase Page</a>
-<a href="Contact.html">Contact</a>
-<a href="Problem-Solving Page.html">Problem-Solving Page</a>
-<a href="Skill.html" >Skill</a>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-</body>
-</html>
- <header>
-        <div class="logo">LA BELLA.</div>
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ef;
+    color: #222;
+}
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#menu">Menu</a>
-            <a href="#hours">Opening Hours</a>
-            <a href="#contact">Contact</a>
+/* NAVIGATION */
+
+header {
+    background: #151515;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.logo span,
+footer span {
+    color: #d6ad60;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #d6ad60;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=85");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    color: white;
+    max-width: 650px;
+}
+
+.subtitle {
+    color: #c49a50;
+    letter-spacing: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 68px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #d6ad60;
+}
+
+.hero-content > p:not(.subtitle) {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d6ad60;
+    color: #151515;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+}
+
+/* INTRODUCTION */
+
+.intro {
+    padding: 90px 15%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.intro p:last-child {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* MENU */
+
+.menu {
+    background: #eee9df;
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.menu-description {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    margin: 20px 0 12px;
+    font-size: 22px;
+}
+
+.menu-card p {
+    color: #666;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+.menu-card span {
+    display: block;
+    color: #b1843b;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #151515;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h2 {
+    letter-spacing: 4px;
+}
+
+footer p {
+    color: #aaa;
+    margin-top: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        padding: 70px 8%;
+    }
+}
+    </style>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+
+        <div class="logo">LA BELLA<span>.</span></div>
+
+        <nav id="navbar">
+
+            <a href="index.html" class="active">Home</a>
+
+            <a href="skills.html">Skills</a>
+
+            <a href="problem-solving.html">Problem Solving</a>
+
+            <a href="showcase.html">Business Showcase</a>
+
+            <a href="contact.html">Contact</a>
+
         </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+
     </header>
-
-
-    <!-- HERO SECTION -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <h1>Welcome to La Bella</h1>
-
-            <p>Authentic flavours. Beautiful food. Unforgettable moments.</p>
-
-            <a href="#menu" class="btn">Explore Our Menu</a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT SECTION -->
-
-    <section class="about" id="about">
-
-        <h2 class="section-title">Our Story</h2>
-
-        <p>
-            Welcome to La Bella, where passion meets flavour.
-            We believe great food brings people together.
-            Our restaurant offers freshly prepared dishes,
-            carefully selected ingredients and a warm,
-            welcoming atmosphere. Whether you're joining us
-            for a family dinner, a romantic evening or a
-            celebration, we promise an unforgettable experience.
-        </p>
-
-    </section>
-
-
-    <!-- MENU SECTION -->
-
-    <section class="menu" id="menu">
-
-        <h2 class="section-title">Our Popular Dishes</h2>
-
-        <p>Discover some of our customers' favourites.</p>
-
-        <div class="menu-container">
-
-            <div class="menu-card">
-
-                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=80">
-
-                <h3>Italian Pasta</h3>
-
-                <p>Fresh pasta with a delicious homemade sauce.</p>
-
-                <div class="price">£14.95</div>
-
-            </div>
-
-
-            <div class="menu-card">
-
-                <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80">
-
-                <h3>Signature Steak</h3>
-
-                <p>Premium grilled steak served with seasonal sides.</p>
-
-                <div class="price">£24.95</div>
-
-            </div>
-
-
-            <div class="menu-card">
-
-                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80">
-
-                <h3>Classic Pizza</h3>
-
-                <p>Stone-baked pizza with fresh ingredients.</p>
-
-                <div class="price">£13.95</div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- RESERVATION SECTION -->
-
-    <section class="reservation">
-
-        <h2>Book Your Table</h2>
-
-        <p>Join us for a wonderful dining experience.</p>
-
-        <a href="mailto:hello@labella.com?subject=Table%20Reservation"
-           class="btn">
-           Make a Reservation
-        </a>
-
-    </section>
-
-
-    <!-- OPENING HOURS -->
-
-    <section class="hours" id="hours">
-
-        <h2 class="section-title">Opening Hours</h2>
-
-        <p>Monday - Friday: 12:00 PM - 10:00 PM</p>
-
-        <p>Saturday: 12:00 PM - 11:00 PM</p>
-
-        <p>Sunday: 12:00 PM - 9:00 PM</p>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer id="contact">
-
-        <h2 class="logo">LA BELLA.</h2>
-
-        <p>123 Restaurant Street, Manchester</p>
-
-        <p>Phone: 01234 567890</p>
-
-        <p>Email: hello@labella.com</p>
-
-        <p>© 2026 La Bella Restaurant. All Rights Reserved.</p>
-
-    </footer>
-
-
-</body>
-</html>
